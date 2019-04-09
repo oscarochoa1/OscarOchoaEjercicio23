@@ -1,4 +1,4 @@
-##PARA LEER ARCHIVOS
+
 
 #include <fstream>
 #include <iostream>
