@@ -5,16 +5,14 @@
 using namespace std;
  
 void ejemplo_lee(string filename);
-void ejemplo_escribe(string filename);
+
 
 int main () {
   string filename;
   filename = "valores_x.txt";
   ejemplo_lee(filename);
 
-  filename = "valores_x.txt";
-  ejemplo_escribe(filename);
-  return 0;
+  
 }
 
 void ejemplo_lee(string filename){
@@ -32,17 +30,3 @@ void ejemplo_lee(string filename){
 
   infile.close();
 }
-
-void ejemplo_escribe(string filename){
-  ofstream outfile;
-
-
-  outfile.open(filename);
-
-  cout << "Escribiendo en " << filename << endl; 
-  for (int i=0; i < 10; i++){
-    outfile << i << endl;
-  }
-  outfile.close(); 
-}
-
