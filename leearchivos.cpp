@@ -2,26 +2,24 @@
 #include <iostream>
 using namespace std;
  
-void ejemplo_lee(string filename, string filename1);
+void ejemplo_lee(string filename);
 
 
 int main () {
   string filename;
-    string filename1;
   filename = "valores_x.txt";
-    filename1 = "valores_y.txt";
-  ejemplo_lee(filename, filename1);
+  ejemplo_lee(filename);
 
   
 }
 
-void ejemplo_lee(string filename, string filename1){
+void ejemplo_lee(string filename){
   ifstream infile; 
   string line;
 
-  infile.open(filename, filename1); 
+  infile.open(filename); 
   
-  cout << "Leyendo de " << filename << filename1<< endl; 
+  cout << "Leyendo de " << filename << endl; 
   getline(infile, line);
   while(infile){
     cout << line << endl;
@@ -30,4 +28,3 @@ void ejemplo_lee(string filename, string filename1){
 
   infile.close();
 }
-
